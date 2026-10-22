@@ -759,7 +759,7 @@
     {
       "id": "mirrorcode",
       "inEci": true,
-      "models": 9,
+      "models": 10,
       "randomBaseline": 0,
       "releaseDate": "2026-06-26",
       "scoreCeiling": 100,
@@ -1261,7 +1261,7 @@
       "unit": "pct"
     }
   ],
-  "generatedAt": "2026-10-21T16:55:56.241Z",
+  "generatedAt": "2026-10-22T06:34:48.806Z",
   "models": [
     {
       "benchmarks": {
@@ -8713,7 +8713,7 @@
         "webdev_arena_elo": null
       },
       "capabilities": {
-        "promptCaching": false,
+        "promptCaching": true,
         "reasoning": true,
         "structuredOutput": null,
         "toolCall": true
@@ -8760,7 +8760,7 @@
         "totalB": 403.4
       },
       "pricing": {
-        "cachedInputPerMTok": null,
+        "cachedInputPerMTok": 0.3,
         "inputPerMTok": 0.6,
         "outputPerMTok": 3.6
       },
@@ -8781,6 +8781,7 @@
         "openWeights": "models.dev",
         "params.activeB": "derived",
         "params.totalB": "huggingface",
+        "pricing.cachedInputPerMTok": "openrouter",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "epoch.ai",
@@ -26329,7 +26330,9 @@
       "maxOutput": 64000,
       "modalities": {
         "input": [
-          "text"
+          "image",
+          "text",
+          "video"
         ],
         "output": [
           "text"
@@ -26402,7 +26405,8 @@
       "modalities": {
         "input": [
           "image",
-          "text"
+          "text",
+          "video"
         ],
         "output": [
           "text"
@@ -34778,8 +34782,8 @@
       },
       "pricing": {
         "cachedInputPerMTok": 0.028,
-        "inputPerMTok": 0.14,
-        "outputPerMTok": 0.2898
+        "inputPerMTok": 0.142,
+        "outputPerMTok": 0.3
       },
       "provenance": {
         "benchmarks.aime": "epoch.ai",
@@ -36233,8 +36237,8 @@
       },
       "pricing": {
         "cachedInputPerMTok": 0.006,
-        "inputPerMTok": 0.23184,
-        "outputPerMTok": 0.944
+        "inputPerMTok": 0.24,
+        "outputPerMTok": 0.96
       },
       "provenance": {
         "benchmarks.aime": "epoch.ai",
@@ -36466,11 +36470,11 @@
     },
     {
       "benchmarks": {
-        "aime": 98.33,
+        "aime": 99.44,
         "arc_agi_2": 72.92,
         "eci": 155.93,
         "fiction_live": null,
-        "gpqa_diamond": 89.84,
+        "gpqa_diamond": 93.18,
         "swe_bench_pro": null,
         "swe_bench_vendor": null,
         "swe_bench_verified": null,
@@ -36580,20 +36584,20 @@
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
-        "releaseDate": "epoch.ai",
-        "releaseDatePrecision": "epoch.ai",
+        "releaseDate": "models.dev",
+        "releaseDatePrecision": "models.dev",
         "scores": "derived",
         "trainingComputeFlop": "epoch.ai",
         "vendorId": "derived"
       },
-      "releaseDate": "2026-09-09",
+      "releaseDate": "2026-10-17",
       "releaseDatePrecision": "day",
       "retiredAt": null,
       "scores": [
         {
           "attribution": "third-party",
           "league": "aime",
-          "score": 98.33,
+          "score": 99.44,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "pct"
@@ -36633,7 +36637,7 @@
         {
           "attribution": "third-party",
           "league": "chess_puzzles",
-          "score": 48,
+          "score": 46,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -36681,7 +36685,7 @@
         {
           "attribution": "third-party",
           "league": "frontiermath_tier_4_v2",
-          "score": 26.83,
+          "score": 46.34,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -36689,7 +36693,7 @@
         {
           "attribution": "third-party",
           "league": "frontiermath_tiers_1_3_v2",
-          "score": 67.37,
+          "score": 71.23,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -36705,7 +36709,7 @@
         {
           "attribution": "third-party",
           "league": "gpqa_diamond",
-          "score": 89.84,
+          "score": 93.18,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "pct"
@@ -36721,7 +36725,7 @@
         {
           "attribution": "third-party",
           "league": "mystery_game_puzzles",
-          "score": 43,
+          "score": 49,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -36745,7 +36749,7 @@
         {
           "attribution": "third-party",
           "league": "simpleqa_verified",
-          "score": 42.9,
+          "score": 42.5,
           "source": "epoch.ai",
           "sourceUrl": null,
           "unit": "pct"
@@ -38034,7 +38038,7 @@
       },
       "capabilities": {
         "promptCaching": true,
-        "reasoning": true,
+        "reasoning": false,
         "structuredOutput": null,
         "toolCall": false
       },
@@ -45017,6 +45021,14 @@
         },
         {
           "attribution": "third-party",
+          "league": "mirrorcode",
+          "score": 58.89,
+          "source": "epoch.ai",
+          "sourceUrl": "https://epoch.ai/benchmarks",
+          "unit": "pct"
+        },
+        {
+          "attribution": "third-party",
           "league": "webdev_arena_elo",
           "score": 1679.5,
           "source": "epoch.ai",
@@ -45235,6 +45247,14 @@
           "score": 63.69,
           "source": "epoch.ai",
           "sourceUrl": "https://conceptualreasoning.ai/lmca",
+          "unit": "pct"
+        },
+        {
+          "attribution": "third-party",
+          "league": "mirrorcode",
+          "score": 58.89,
+          "source": "epoch.ai",
+          "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "pct"
         },
         {
@@ -46845,7 +46865,7 @@
         "totalB": 25.81
       },
       "pricing": {
-        "cachedInputPerMTok": 0.05,
+        "cachedInputPerMTok": 0.049,
         "inputPerMTok": 0.1,
         "outputPerMTok": 0.34
       },
@@ -49489,6 +49509,76 @@
       "slug": "kwaipilot-kat-coder-pro-v2-5",
       "trainingComputeFlop": null,
       "vendorId": "kwaipilot"
+    },
+    {
+      "benchmarks": {
+        "aime": null,
+        "arc_agi_2": null,
+        "eci": null,
+        "fiction_live": null,
+        "gpqa_diamond": null,
+        "swe_bench_pro": null,
+        "swe_bench_vendor": null,
+        "swe_bench_verified": null,
+        "webdev_arena_elo": null
+      },
+      "capabilities": {
+        "promptCaching": false,
+        "reasoning": false,
+        "structuredOutput": null,
+        "toolCall": false
+      },
+      "coding": [],
+      "contextWindow": 262144,
+      "firstSeenAt": "2026-10-22T06:34:48.806Z",
+      "id": "lightonai/lightonocr-3-0.8b",
+      "knowledgeCutoff": null,
+      "license": "Apache-2.0",
+      "maxOutput": 16384,
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LightOnOCR-3 0.8B",
+      "openWeights": true,
+      "params": {
+        "activeB": null,
+        "confidence": "exact",
+        "totalB": 0.85
+      },
+      "pricing": {
+        "cachedInputPerMTok": null,
+        "inputPerMTok": 2.464,
+        "outputPerMTok": null
+      },
+      "provenance": {
+        "capabilities.promptCaching": "derived",
+        "capabilities.reasoning": "models.dev",
+        "capabilities.toolCall": "models.dev",
+        "contextWindow": "models.dev",
+        "license": "huggingface",
+        "maxOutput": "models.dev",
+        "modalities": "models.dev",
+        "name": "models.dev",
+        "openWeights": "models.dev",
+        "params.totalB": "huggingface",
+        "pricing.inputPerMTok": "models.dev",
+        "releaseDate": "models.dev",
+        "releaseDatePrecision": "models.dev",
+        "vendorId": "derived"
+      },
+      "releaseDate": "2026-10-08",
+      "releaseDatePrecision": "day",
+      "retiredAt": null,
+      "scores": [],
+      "slug": "lightonai-lightonocr-3-0-8b",
+      "trainingComputeFlop": null,
+      "vendorId": "lightonai"
     },
     {
       "benchmarks": {
@@ -67145,7 +67235,7 @@
         "webdev_arena_elo": null
       },
       "capabilities": {
-        "promptCaching": false,
+        "promptCaching": true,
         "reasoning": true,
         "structuredOutput": null,
         "toolCall": true
@@ -67173,9 +67263,9 @@
         "totalB": 49
       },
       "pricing": {
-        "cachedInputPerMTok": null,
-        "inputPerMTok": 0.1,
-        "outputPerMTok": 0.4
+        "cachedInputPerMTok": 0.075,
+        "inputPerMTok": 0.15,
+        "outputPerMTok": 0.15
       },
       "provenance": {
         "capabilities.promptCaching": "derived",
@@ -67187,8 +67277,9 @@
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.totalB": "derived",
-        "pricing.inputPerMTok": "litellm",
-        "pricing.outputPerMTok": "litellm",
+        "pricing.cachedInputPerMTok": "models.dev",
+        "pricing.inputPerMTok": "models.dev",
+        "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "vendorId": "derived"
@@ -67243,7 +67334,7 @@
       },
       "pricing": {
         "cachedInputPerMTok": null,
-        "inputPerMTok": 0.1,
+        "inputPerMTok": 0.4,
         "outputPerMTok": 0.4
       },
       "provenance": {
@@ -67256,8 +67347,8 @@
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.totalB": "derived",
-        "pricing.inputPerMTok": "litellm",
-        "pricing.outputPerMTok": "litellm",
+        "pricing.inputPerMTok": "models.dev",
+        "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "vendorId": "derived"
@@ -67658,9 +67749,9 @@
         "openWeights": "models.dev",
         "params.activeB": "derived",
         "params.totalB": "derived",
-        "pricing.cachedInputPerMTok": "litellm",
-        "pricing.inputPerMTok": "litellm",
-        "pricing.outputPerMTok": "litellm",
+        "pricing.cachedInputPerMTok": "models.dev",
+        "pricing.inputPerMTok": "models.dev",
+        "pricing.outputPerMTok": "models.dev",
         "releaseDate": "openrouter",
         "releaseDatePrecision": "openrouter",
         "vendorId": "derived"
@@ -67793,9 +67884,9 @@
         "totalB": 120
       },
       "pricing": {
-        "cachedInputPerMTok": 0.025,
-        "inputPerMTok": 0.09714286,
-        "outputPerMTok": 0.48
+        "cachedInputPerMTok": 0.15,
+        "inputPerMTok": 0.15,
+        "outputPerMTok": 0.65
       },
       "provenance": {
         "capabilities.promptCaching": "derived",
@@ -68699,7 +68790,7 @@
         "webdev_arena_elo": null
       },
       "capabilities": {
-        "promptCaching": false,
+        "promptCaching": true,
         "reasoning": true,
         "structuredOutput": null,
         "toolCall": true
@@ -68729,7 +68820,7 @@
         "totalB": 12
       },
       "pricing": {
-        "cachedInputPerMTok": null,
+        "cachedInputPerMTok": 0.04,
         "inputPerMTok": 0.2,
         "outputPerMTok": 0.6
       },
@@ -68743,8 +68834,9 @@
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.totalB": "derived",
-        "pricing.inputPerMTok": "vercel-gateway",
-        "pricing.outputPerMTok": "vercel-gateway",
+        "pricing.cachedInputPerMTok": "models.dev",
+        "pricing.inputPerMTok": "models.dev",
+        "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "vendorId": "derived"
@@ -84738,7 +84830,7 @@
       },
       "pricing": {
         "cachedInputPerMTok": 0.0275,
-        "inputPerMTok": 0.05,
+        "inputPerMTok": 0.055,
         "outputPerMTok": 0.2
       },
       "provenance": {
@@ -87951,6 +88043,74 @@
       "slug": "quiverai-arrow-2-telos",
       "trainingComputeFlop": null,
       "vendorId": "quiverai"
+    },
+    {
+      "benchmarks": {
+        "aime": null,
+        "arc_agi_2": null,
+        "eci": null,
+        "fiction_live": null,
+        "gpqa_diamond": null,
+        "swe_bench_pro": null,
+        "swe_bench_vendor": null,
+        "swe_bench_verified": null,
+        "webdev_arena_elo": null
+      },
+      "capabilities": {
+        "promptCaching": null,
+        "reasoning": true,
+        "structuredOutput": null,
+        "toolCall": true
+      },
+      "coding": [],
+      "contextWindow": 262144,
+      "firstSeenAt": "2026-10-22T06:34:48.806Z",
+      "id": "recursive/flint",
+      "knowledgeCutoff": "2026-06",
+      "license": "Apache-2.0",
+      "maxOutput": 262144,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Flint",
+      "openWeights": true,
+      "params": {
+        "activeB": null,
+        "confidence": "exact",
+        "totalB": 39.79
+      },
+      "pricing": {
+        "cachedInputPerMTok": null,
+        "inputPerMTok": null,
+        "outputPerMTok": null
+      },
+      "provenance": {
+        "capabilities.reasoning": "models.dev",
+        "capabilities.toolCall": "models.dev",
+        "contextWindow": "models.dev",
+        "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
+        "maxOutput": "models.dev",
+        "modalities": "models.dev",
+        "name": "models.dev",
+        "openWeights": "models.dev",
+        "params.totalB": "huggingface",
+        "releaseDate": "models.dev",
+        "releaseDatePrecision": "models.dev",
+        "vendorId": "derived"
+      },
+      "releaseDate": "2026-10-21",
+      "releaseDatePrecision": "day",
+      "retiredAt": null,
+      "scores": [],
+      "slug": "recursive-flint",
+      "trainingComputeFlop": null,
+      "vendorId": "recursive"
     },
     {
       "benchmarks": {
@@ -101753,22 +101913,22 @@
   ],
   "sources": {
     "derived": {
-      "fetchedAt": "2026-10-21T16:55:56.241Z",
+      "fetchedAt": "2026-10-22T06:34:48.806Z",
       "note": "管线内推导的字段（规模档位、缓存能力、退役判定）",
       "ok": true
     },
     "epoch.ai": {
-      "fetchedAt": "2026-10-21T16:55:56.241Z",
-      "note": "ZIP 92 个条目；取到 7/7 个指标；编程赛制 9 个；全榜单 81 个；训练算力 329 行；去重后 417 个模型实体；合规拦截 1 个文件",
+      "fetchedAt": "2026-10-22T06:34:48.806Z",
+      "note": "ZIP 92 个条目；取到 7/7 个指标；编程赛制 9 个；全榜单 81 个；训练算力 329 行；去重后 418 个模型实体；合规拦截 1 个文件",
       "ok": true
     },
     "huggingface": {
-      "fetchedAt": "2026-10-21T16:55:56.241Z",
-      "note": "请求 237 个开源模型，成功 233，失败 4",
+      "fetchedAt": "2026-10-22T06:34:48.806Z",
+      "note": "请求 239 个开源模型，成功 235，失败 4",
       "ok": true
     },
     "litellm": {
-      "fetchedAt": "2026-10-21T16:55:56.241Z",
+      "fetchedAt": "2026-10-22T06:34:48.806Z",
       "note": "4244 条（对话类 3247 条）；用作新模型的第三方佐证，以及 models.dev 缺项时的定价/上下文兜底",
       "ok": true
     },
@@ -101778,18 +101938,18 @@
       "ok": false
     },
     "lmarena": {
-      "fetchedAt": "2026-10-21T16:55:56.241Z",
+      "fetchedAt": "2026-10-22T06:34:48.806Z",
       "note": "7/7 个分榜，共 334 条 Arena 分",
       "ok": true
     },
     "models.dev": {
-      "fetchedAt": "2026-10-21T16:55:56.241Z",
-      "note": "models.json 600 条；api.json 232 provider / 9190 条；benchmarks[] 1171 条，已拦截 AA 血缘 183 条，非编程口径跳过 607 条",
+      "fetchedAt": "2026-10-22T06:34:48.806Z",
+      "note": "models.json 602 条；api.json 232 provider / 9142 条；benchmarks[] 1173 条，已拦截 AA 血缘 183 条，非编程口径跳过 609 条",
       "ok": true
     },
     "openrouter": {
-      "fetchedAt": "2026-10-21T16:55:56.241Z",
-      "note": "468 条；已剔除 artificial_analysis 287 处（AA ToS 合规）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
+      "fetchedAt": "2026-10-22T06:34:48.806Z",
+      "note": "468 条；已剔除 artificial_analysis 286 处（AA ToS 合规）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
       "ok": true
     },
     "override": {
@@ -101798,8 +101958,8 @@
       "ok": true
     },
     "vercel-gateway": {
-      "fetchedAt": "2026-10-21T16:55:56.241Z",
-      "note": "482 条（language 323 条）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
+      "fetchedAt": "2026-10-22T06:34:48.806Z",
+      "note": "486 条（language 323 条）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
       "ok": true
     }
   },
@@ -102105,6 +102265,16 @@
       "nameZh": "快手"
     },
     {
+      "accentColor": "#7c8da6",
+      "continent": "west",
+      "country": "ZZ",
+      "homepage": null,
+      "id": "lightonai",
+      "motif": "wanderer",
+      "name": "Lightonai",
+      "nameZh": "Lightonai"
+    },
+    {
       "accentColor": "#0f6fff",
       "continent": "west",
       "country": "US",
@@ -102323,6 +102493,16 @@
       "motif": "wanderer",
       "name": "Quiverai",
       "nameZh": "Quiverai"
+    },
+    {
+      "accentColor": "#7c8da6",
+      "continent": "west",
+      "country": "ZZ",
+      "homepage": null,
+      "id": "recursive",
+      "motif": "wanderer",
+      "name": "Recursive",
+      "nameZh": "Recursive"
     },
     {
       "accentColor": "#7c8da6",
